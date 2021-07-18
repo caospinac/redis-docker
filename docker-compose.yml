@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+
+  redis:
+    build: .
+    container_name: redis
+    env_file:
+      - .env
+    ports:
+      - ${REDIS_PORT:-6379}:6379
